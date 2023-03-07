@@ -52,3 +52,6 @@ Route::post('/edit_profile_exec', [App\Http\Controllers\Profile\ProfileEditContr
 
 //ajaxテスト用ルーティング
 Route::get('/ajax_test', [App\Http\Controllers\TestController::class, 'send_data']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
