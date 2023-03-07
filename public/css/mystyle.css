@@ -1,0 +1,66 @@
+/*
+  custom 
+*/
+.hover-shadow{
+  transition: all .1s ease-in-out;
+}
+.hover-shadow:hover{
+  box-shadow: 1px 1px 12px rgba(0,0,0,.65);
+}
+.hover-expand{
+  transition: all .1s ease-in-out;
+}
+.hover-expand:hover{
+  transform: scale(1.2);
+}
+
+.hover-white{
+  transition: all .1s ease-in-out;
+  position:relative;
+}
+.hover-white:hover{
+  background-color: white;
+  box-shadow: 1px 1px 12px rgba(0,0,0,.3);
+}
+
+.message-box{
+  display: inline-block;
+}
+
+.my-sticky-top{
+  position: sticky;
+  top: 0;
+}
+
+/*
+モーダルテスト用
+*/
+#word-info-modal-content, 
+#create-word-modal-content, 
+#edit-word-modal-content,
+#delete-word-confirm-modal-content{
+  display:none;
+	border:1px solid gray;
+  border-radius: 10px;
+	background:#fff;
+  /*追加分*/
+  position:fixed;
+  z-index:999;
+}
+
+#modal-overlay{
+	z-index:1;
+	position:fixed;
+	top:0;
+	left:0;
+	width:50%;
+	height:120%;
+	background-color:rgba(0,0,0,0.75);
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+.word_detail{
+	resize: none;
+}
