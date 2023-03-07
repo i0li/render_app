@@ -18,7 +18,7 @@ class CreateChatsTable extends Migration
             $table->unsignedBigInteger('room_id')->comment('部屋ID');
             $table->unsignedBigInteger('user_id')->comment('ユーザID');
             $table->text('text')->comment('テキスト');
-            $table->timestamp('send_at')->comment('送信日時');
+            $table->timestamp('send_at')->default(DB::raw('CURRENT_TIMESTAMP'))->comment('送信日時');
             //外部キー制約
             $table->foreign('room_id')->references('id')->on('rooms');
             $table->foreign('user_id')->references('id')->on('users');
