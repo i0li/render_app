@@ -68,7 +68,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <ul class="list-group list-group-horizontal">
-                                    <li class="list-group-item border-0"><img src="{{ asset(Auth::user()->icon_path) }}" class="border rounded-circle img-responsive" height="40px" width="40px"></li>                             <li class="list-group-item border-0 px-0"></li>
+                                    <li class="list-group-item border-0"><img src="{{ Auth::user()->icon_path }}" class="border rounded-circle img-responsive" height="40px" width="40px"></li>                             <li class="list-group-item border-0 px-0"></li>
                                     <li class="list-group-item border-0 px-0">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }}
