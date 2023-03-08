@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('custom-script')
-<script src="{{ asset('js/myscript.js') }}" defer></script>
+<script src="{{ asset('js/myscript.js') }}"></script>
 <script>
   let words = @json($words);
   let login_user_id = @json(Auth::user()->id);
