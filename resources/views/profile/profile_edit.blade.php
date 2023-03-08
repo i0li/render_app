@@ -29,7 +29,7 @@
                               <div class='d-flex justify-content-center'>
                                 <img id="icon-preview" src="{{ asset($target_user_info->icon_path)}}" class="border rounded-circle img-responsive my-3" width="120px">
                               </div>
-                              <input id="icon" type="file" class="form-control col-3" name="icon" accept='.jpg, .jpeg, .png'>
+                              <input id="icon" type="file" class="form-control col-3" name="icon" accept='.jpg, .jpeg, .png' disabled>
                         <div>
 
                         <div class="mt-3">
