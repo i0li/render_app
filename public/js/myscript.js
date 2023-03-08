@@ -327,29 +327,29 @@ $("#delete-word-confirm-modal-open").click(
 //    　　　 メッセージ送信用
 //***********************************//
 
-window.Echo.channel('ChatChannel')
-.listen('SendChatEvent',function(data){
+// window.Echo.channel('ChatChannel')
+// .listen('SendChatEvent',function(data){
 
-  if((data['chat_contants']['user_id'] != login_user_id) && (data['chat_contants']['room_id'] == current_room_id)){
-    let receive_textarea_value_array = data['chat_contants']['text'].split(/\r?\n/g);
-    let receive_chat_contants = '<div class="message_box w-100"> \
-                                  <div class="d-flex flex-row ms-3 mt-3 text-secondary align-items-center pb-1"> \
-                                    <img src="' + data['chat_contants']['user_icon'] + '" class="border rounded-circle img-responsive me-2" width="30px">\
-                                    <div class="pe-2">'+ data['chat_contants']['user_name'] +'</div>\
-                                    <div class="pe-2">' + data['chat_contants']['send_at'] + '</div>\
-                                    <div class="pe-2"></div>\
-                                  </div>\
-                                  <div class="bg-white ms-3 px-3 py-2 alert alert-secondary message-box">';
-    $.each(receive_textarea_value_array, function(index, value){
-      receive_chat_contants += value+'</br>';
-    })
-    receive_chat_contants += '</div> </div>';
+//   if((data['chat_contants']['user_id'] != login_user_id) && (data['chat_contants']['room_id'] == current_room_id)){
+//     let receive_textarea_value_array = data['chat_contants']['text'].split(/\r?\n/g);
+//     let receive_chat_contants = '<div class="message_box w-100"> \
+//                                   <div class="d-flex flex-row ms-3 mt-3 text-secondary align-items-center pb-1"> \
+//                                     <img src="' + data['chat_contants']['user_icon'] + '" class="border rounded-circle img-responsive me-2" width="30px">\
+//                                     <div class="pe-2">'+ data['chat_contants']['user_name'] +'</div>\
+//                                     <div class="pe-2">' + data['chat_contants']['send_at'] + '</div>\
+//                                     <div class="pe-2"></div>\
+//                                   </div>\
+//                                   <div class="bg-white ms-3 px-3 py-2 alert alert-secondary message-box">';
+//     $.each(receive_textarea_value_array, function(index, value){
+//       receive_chat_contants += value+'</br>';
+//     })
+//     receive_chat_contants += '</div> </div>';
   
-    $('#chat_area_contants').append(receive_chat_contants)
-    let chat_area_contants = $('#chat_area_contants');
-    chat_area_contants[0].scrollTo(0, chat_area_contants[0].scrollHeight);
-  }
-});
+//     $('#chat_area_contants').append(receive_chat_contants)
+//     let chat_area_contants = $('#chat_area_contants');
+//     chat_area_contants[0].scrollTo(0, chat_area_contants[0].scrollHeight);
+//   }
+// });
 
 //送信ボタンのダブルクリックを禁止
 $(function() {
