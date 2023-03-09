@@ -14,6 +14,7 @@ class CreateMembersTable extends Migration
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
+            $table->id()->comment('メンバーID');
             $table->unsignedBigInteger('room_id')->comment('部屋ID');
             $table->unsignedBigInteger('user_id')->comment('ユーザID');
             //外部キー制約　
