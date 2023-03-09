@@ -14,12 +14,13 @@ class CreateMembersTable extends Migration
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
-            $table->id()->comment('メンバーID');
             $table->unsignedBigInteger('room_id')->comment('部屋ID');
             $table->unsignedBigInteger('user_id')->comment('ユーザID');
             //外部キー制約　
             $table->foreign('room_id')->references('id')->on('rooms');
             $table->foreign('user_id')->references('id')->on('users');
+
+            $table->primary(['room_id', 'user_id']);
         });
 
         //テストデータ入力
